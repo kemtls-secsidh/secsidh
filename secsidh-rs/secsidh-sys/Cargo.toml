@@ -1,0 +1,51 @@
+[package]
+name = "secsidh-sys"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+libc = "0.2"
+getrandom = "0.2"
+
+[build-dependencies]
+cmake = "0.1"
+bindgen = "0.64"
+build-deps = "0.1"
+
+[features]
+default = ["csidh", "ctidh"]
+
+karatsuba = []
+
+csidh = [
+    "csidh2047m1l226",
+    "csidh4095m27l262",
+    "csidh5119m46l244",
+    "csidh6143m59l262",
+    "csidh8191m78l338",
+    "csidh9215m85l389",
+]
+ctidh = [
+    "ctidh2047m1l226",
+    "ctidh4095m27l262",
+    "ctidh5119m46l244",
+    "ctidh6143m59l262",
+    "ctidh8191m78l338",
+    "ctidh9215m85l389",
+]
+
+csidh2047m1l226 = []
+csidh4095m27l262 = []
+csidh5119m46l244 = []
+csidh6143m59l262 = []
+csidh8191m78l338 = []
+csidh9215m85l389 = []
+
+ctidh2047m1l226 = []
+ctidh4095m27l262 = []
+ctidh5119m46l244 = []
+ctidh6143m59l262 = []
+ctidh8191m78l338 = []
+ctidh9215m85l389 = []

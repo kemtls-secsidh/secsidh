@@ -1,0 +1,10 @@
+.vscode/
+.idea
+.DS_Store
+.py*
+.log
+.gpg
+/code/tmp
+.magma
+.py
+.m

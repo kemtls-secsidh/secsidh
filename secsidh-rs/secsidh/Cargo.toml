@@ -1,0 +1,59 @@
+[package]
+name = "secsidh"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+
+[[bench]]
+name = "keygen"
+harness = false
+
+[dev-dependencies]
+criterion = { version = "0.3", features = ["html_reports"] }
+
+[dependencies]
+libc = "0.2"
+paste = "1"
+
+[dependencies.secsidh-sys]
+path = "../secsidh-sys"
+version = "0.1"
+default-features = false
+
+[features]
+default = ["csidh", "ctidh", "karatsuba"]
+
+karatsuba = ["secsidh-sys/karatsuba"]
+
+csidh = [
+    "csidh2047m1l226",
+    "csidh4095m27l262",
+    "csidh5119m46l244",
+    "csidh6143m59l262",
+    "csidh8191m78l338",
+    "csidh9215m85l389",
+]
+ctidh = [
+    "ctidh2047m1l226",
+    "ctidh4095m27l262",
+    "ctidh5119m46l244",
+    "ctidh6143m59l262",
+    "ctidh8191m78l338",
+    "ctidh9215m85l389",
+]
+
+csidh2047m1l226  = ["secsidh-sys/csidh2047m1l226"]
+csidh4095m27l262 = ["secsidh-sys/csidh4095m27l262"]
+csidh5119m46l244 = ["secsidh-sys/csidh5119m46l244"]
+csidh6143m59l262 = ["secsidh-sys/csidh6143m59l262"]
+csidh8191m78l338 = ["secsidh-sys/csidh8191m78l338"]
+csidh9215m85l389 = ["secsidh-sys/csidh9215m85l389"]
+
+ctidh2047m1l226  = ["secsidh-sys/ctidh2047m1l226"]
+ctidh4095m27l262 = ["secsidh-sys/ctidh4095m27l262"]
+ctidh5119m46l244 = ["secsidh-sys/ctidh5119m46l244"]
+ctidh6143m59l262 = ["secsidh-sys/ctidh6143m59l262"]
+ctidh8191m78l338 = ["secsidh-sys/ctidh8191m78l338"]
+ctidh9215m85l389 = ["secsidh-sys/ctidh9215m85l389"]
