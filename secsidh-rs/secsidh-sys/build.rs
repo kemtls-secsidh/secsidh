@@ -68,14 +68,14 @@ fn main() {
     config.define("SECSIDH_ENABLE_CSIDH5119m46l244", onoff!("csidh5119m46l244"));
     config.define("SECSIDH_ENABLE_CSIDH6143m59l262", onoff!("csidh6143m59l262"));
     config.define("SECSIDH_ENABLE_CSIDH8191m78l338", onoff!("csidh8191m78l338"));
-    config.define("SECSIDH_ENABLE_CSIDH99215m85l389", onoff!("csidh99215m85l389"));
+    config.define("SECSIDH_ENABLE_CSIDH9215m85l389", onoff!("csidh9215m85l389"));
     // CTIDH
     config.define("SECSIDH_ENABLE_CTIDH2047m1l226", onoff!("ctidh2047m1l226"));
     config.define("SECSIDH_ENABLE_CTIDH4095m27l262", onoff!("ctidh4095m27l262"));
     config.define("SECSIDH_ENABLE_CTIDH5119m46l244", onoff!("ctidh5119m46l244"));
     config.define("SECSIDH_ENABLE_CTIDH6143m59l262", onoff!("ctidh6143m59l262"));
     config.define("SECSIDH_ENABLE_CTIDH8191m78l338", onoff!("ctidh8191m78l338"));
-    config.define("SECSIDH_ENABLE_CTIDH99215m85l389", onoff!("ctidh99215m85l389"));
+    config.define("SECSIDH_ENABLE_CTIDH9215m85l389", onoff!("ctidh9215m85l389"));
 
     let outdir = config.build_target("secsidh").build();
     let libdir = outdir.join("build").join("lib");
